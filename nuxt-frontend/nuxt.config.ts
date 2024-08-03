@@ -37,5 +37,8 @@ export default defineNuxtConfig({
       }
     }
   },
-  css: ['primeicons/primeicons.css']
+  css: ['primeicons/primeicons.css'],
+  app: {
+    pageTransition: { name: 'page', mode: 'out-in'}
+  }
 })
