@@ -5,6 +5,9 @@ const userEmail = ref("");
 const password = ref("");
 const confirmPassword = ref("");
 const passwordCheck = ref(true);
+const id = ref("");
+const complex = ref("");
+const unit = ref("");
 const errorMessage = ref("");
 
 const checkPasswordMatches = () => {
@@ -29,12 +32,27 @@ const checkPasswordMatches = () => {
 
 <template>
   <div
-    class="w-full h-screen flex flex-col justify-center items-center p-4 bg-slate-200"
+    class="w-full min-h-screen flex flex-col justify-center items-center p-4 bg-slate-200 relative"
   >
-    <div class="self-center">
+    <img
+      src="../../public/background.jpg"
+      alt=""
+      class="z-0 w-full h-full absolute object-fill"
+    />
+    <div
+      class="self-center z-10 relative flex flex-row items-center justify-center"
+    >
+      <div class="absolute -top-[25px]">
+        <Avatar
+          icon="pi pi-chart-bar"
+          class="mr-2"
+          size="xlarge"
+          shape="circle"
+        />
+      </div>
       <Card style="width: 23rem">
         <template #title>
-          <h1 class="text-center text-2xl">Smart Complex</h1>
+          <h1 class="text-center text-2xl mt-10">Oami Smart Complex</h1>
         </template>
         <template #content>
           <div class="flex flex-col gap-4 items-center justify-between">
@@ -45,6 +63,35 @@ const checkPasswordMatches = () => {
                 type="email"
                 id="email"
                 v-model="userEmail"
+                class="w-full"
+              />
+            </div>
+            <div class="flex flex-col gap-1 w-full">
+              <small class="font-semibold">ID Number</small>
+              <InputText
+                placeholder="1234567890"
+                id="id"
+                type="number"
+                v-model="id"
+                class="w-full"
+              />
+            </div>
+            <div class="flex flex-col gap-1 w-full">
+              <small class="font-semibold">Complex</small>
+              <InputText
+                placeholder="Complex"
+                id="complex"
+                v-model="complex"
+                class="w-full"
+              />
+            </div>
+            <div class="flex flex-col gap-1 w-full">
+              <small class="font-semibold">Unit</small>
+              <InputText
+                placeholder="01"
+                type="number"
+                id="unit"
+                v-model="unit"
                 class="w-full"
               />
             </div>
@@ -104,7 +151,7 @@ const checkPasswordMatches = () => {
           </div>
         </template>
         <template #footer>
-          <div class="flex flex-row justify-between items-center w-full mt-4">
+          <div class="flex flex-row justify-center items-center w-full mt-4">
             <small
               >Already have an account?
               <NuxtLink class="underline" to="/login">Login</NuxtLink>
