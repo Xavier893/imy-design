@@ -12,7 +12,7 @@ Follow these steps to get the project up and running on your local machine.
 If you have access to the repository, clone it using git:
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/Xavier893/imy-design
 ```
 
 If you do not have access to the repository and need to download it manually, simply download and extract the project folder to your desired location.
@@ -43,3 +43,7 @@ pnpm dev
 ```
 
 This will start the Nuxt development server. You can view the project in your browser by navigating to [http://localhost:3000](http://localhost:3000).
+
+### Note
+
+This will open the application on the Home Page. Please click on the login link provided in the home page to view Login/Registration.
