@@ -18,6 +18,8 @@ Follow these steps to get the project up and running on your local machine.
 
 ### 1. Clone the Repository
 
+Git Repo URL: https://github.com/Xavier893/imy-design
+
 If you have access to the repository, clone it using git:
 
 ```bash
