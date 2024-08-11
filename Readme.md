@@ -1,3 +1,12 @@
+## Group Members - Hustle Squad
+Natalie Walsh - u21515086
+
+Xavier Reynolds - u20526254
+
+Jerome Lou - u21556122
+
+Sonaly Ambelal - u21439321
+
 ## Table of Contents
 
 - [Installation](#installation)
