@@ -57,22 +57,19 @@ const validateEmail = (email: string) => {
     <img
       src="../../public/background.jpg"
       alt=""
-      class="z-0 w-full h-full absolute object-fill"
+      class="z-0 w-full h-full absolute object-cover"
     />
     <div
       class="self-center z-10 relative flex flex-row items-center justify-center"
     >
-      <div class="absolute -top-[25px]">
-        <Avatar
-          icon="pi pi-chart-bar"
-          class="mr-2"
-          size="xlarge"
-          shape="circle"
-        />
+      <div
+        class="absolute -top-[50px] rounded-full bg-slate-200 w-[100px] h-[100px] overflow-hidden"
+      >
+        <img src="../../assets/logo.webp" alt="Logo" class="object-cover" />
       </div>
       <Card style="width: 23rem">
         <template #title>
-          <h1 class="text-center text-2xl mt-10">Smart Complex</h1>
+          <h1 class="text-center text-2xl mt-12">Bad L's Hobbies</h1>
         </template>
         <template #content>
           <div class="flex flex-col gap-4 items-center justify-between">

@@ -5,9 +5,6 @@ const userEmail = ref("");
 const password = ref("");
 const confirmPassword = ref("");
 const passwordCheck = ref(true);
-const id = ref("");
-const complex = ref("");
-const unit = ref("");
 const errorMessage = ref("");
 
 const checkPasswordMatches = () => {
@@ -37,22 +34,19 @@ const checkPasswordMatches = () => {
     <img
       src="../../public/background.jpg"
       alt=""
-      class="z-0 w-full h-full absolute object-fill"
+      class="z-0 w-full h-full absolute object-cover"
     />
     <div
       class="self-center z-10 relative flex flex-row items-center justify-center"
     >
-      <div class="absolute -top-[25px]">
-        <Avatar
-          icon="pi pi-chart-bar"
-          class="mr-2"
-          size="xlarge"
-          shape="circle"
-        />
+      <div
+        class="absolute -top-[50px] rounded-full bg-slate-200 w-[100px] h-[100px] overflow-hidden"
+      >
+        <img src="../../assets/logo.webp" alt="Logo" class="object-cover" />
       </div>
       <Card style="width: 23rem">
         <template #title>
-          <h1 class="text-center text-2xl mt-10">Oami Smart Complex</h1>
+          <h1 class="text-center text-2xl mt-12">Bad L's Hobbies</h1>
         </template>
         <template #content>
           <div class="flex flex-col gap-4 items-center justify-between">
@@ -63,35 +57,6 @@ const checkPasswordMatches = () => {
                 type="email"
                 id="email"
                 v-model="userEmail"
-                class="w-full"
-              />
-            </div>
-            <div class="flex flex-col gap-1 w-full">
-              <small class="font-semibold">ID Number</small>
-              <InputText
-                placeholder="1234567890"
-                id="id"
-                type="number"
-                v-model="id"
-                class="w-full"
-              />
-            </div>
-            <div class="flex flex-col gap-1 w-full">
-              <small class="font-semibold">Complex</small>
-              <InputText
-                placeholder="Complex"
-                id="complex"
-                v-model="complex"
-                class="w-full"
-              />
-            </div>
-            <div class="flex flex-col gap-1 w-full">
-              <small class="font-semibold">Unit</small>
-              <InputText
-                placeholder="01"
-                type="number"
-                id="unit"
-                v-model="unit"
                 class="w-full"
               />
             </div>
