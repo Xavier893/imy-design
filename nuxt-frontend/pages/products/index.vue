@@ -119,8 +119,10 @@ const handleProductClick = (product) => {
     :rows="layout === 'grid' ? 8 : 5"
   >
     <template #header>
-      <div class="flex justify-between items-center">
-        <div class="flex items-center justify-between gap-2">
+      <div class="flex flex-col md:flex-row justify-between items-center">
+        <div
+          class="flex flex-col md:flex-row items-center justify-between gap-2"
+        >
           <InputText
             v-model="searchQuery"
             placeholder="Search for a product..."

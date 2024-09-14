@@ -6,5 +6,8 @@
     <h1 class="font-bold text-2xl">
       Go to <NuxtLink to="/products" class="underline">products</NuxtLink>
     </h1>
+    <h1 class="font-bold text-2xl">
+      Go to <NuxtLink to="/admin" class="underline">admin product add</NuxtLink>
+    </h1>
   </div>
 </template>
