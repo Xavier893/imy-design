@@ -86,7 +86,7 @@ definePageMeta({
 			</div>
 			<Card style="width: 23rem">
 				<template #title>
-					<h1 class="text-center text-2xl mt-12">Bad L's Hobbies</h1>
+					<h1 class="text-center text-2xl mt-12">Hustle Hobbies</h1>
 				</template>
 				<template #content>
 					<div class="flex flex-col gap-4 items-center justify-between">

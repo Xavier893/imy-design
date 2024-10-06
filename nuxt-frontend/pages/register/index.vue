@@ -72,11 +72,11 @@ definePageMeta({
 			<div
 				class="absolute -top-[50px] rounded-full bg-slate-200 w-[100px] h-[100px] overflow-hidden"
 			>
-				<img src="../../assets/logo.webp" alt="Logo" class="object-cover" />
+				<img src="/newlogo.webp" alt="Logo" class="object-cover" />
 			</div>
 			<Card style="width: 23rem">
 				<template #title>
-					<h1 class="text-center text-2xl mt-12">Bad L's Hobbies</h1>
+					<h1 class="text-center text-2xl mt-12">Hustle Hobbies</h1>
 				</template>
 				<template #content>
 					<div class="flex flex-col gap-4 items-center justify-between">

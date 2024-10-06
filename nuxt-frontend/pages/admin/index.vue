@@ -309,6 +309,7 @@ const onAdvancedUpload = () => {
 					<template #body="slotProps">
 						<Button
 							icon="pi pi-pencil"
+							severity="info"
 							outlined
 							rounded
 							class="mr-2"
@@ -328,7 +329,8 @@ const onAdvancedUpload = () => {
 
 		<Dialog
 			v-model:visible="productDialog"
-			:style="{ width: '450px' }"
+			class="w-[450px]"
+			:style="{ 'font-family': 'Montserrat' }"
 			header="Product Details"
 			:modal="true"
 		>
@@ -482,8 +484,19 @@ const onAdvancedUpload = () => {
 			</div>
 
 			<template #footer>
-				<Button label="Cancel" icon="pi pi-times" text @click="hideDialog" />
-				<Button label="Save" icon="pi pi-check" @click="saveProduct" />
+				<Button
+					label="Cancel"
+					severity="secondary"
+					icon="pi pi-times"
+					text
+					@click="hideDialog"
+				/>
+				<Button
+					label="Save"
+					severity="info"
+					icon="pi pi-check"
+					@click="saveProduct"
+				/>
 			</template>
 		</Dialog>
 
@@ -503,17 +516,24 @@ const onAdvancedUpload = () => {
 			<template #footer>
 				<Button
 					label="No"
+					severity="secondary"
 					icon="pi pi-times"
-					text
+					outlined
 					@click="deleteProductDialog = false"
 				/>
-				<Button label="Yes" icon="pi pi-check" @click="deleteProduct" />
+				<Button
+					label="Yes"
+					icon="pi pi-check"
+					severity="danger"
+					@click="deleteProduct"
+				/>
 			</template>
 		</Dialog>
 
 		<Dialog
 			v-model:visible="deleteProductsDialog"
-			:style="{ width: '450px' }"
+			class="w-[450px]"
+			:style="{ 'font-family': 'Montserrat' }"
 			header="Confirm"
 			:modal="true"
 		>
@@ -526,14 +546,15 @@ const onAdvancedUpload = () => {
 			<template #footer>
 				<Button
 					label="No"
+					severity="secondary"
 					icon="pi pi-times"
-					text
+					outlined
 					@click="deleteProductsDialog = false"
 				/>
 				<Button
 					label="Yes"
 					icon="pi pi-check"
-					text
+					severity="danger"
 					@click="deleteSelectedProducts"
 				/>
 			</template>
