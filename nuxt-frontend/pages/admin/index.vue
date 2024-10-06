@@ -309,7 +309,7 @@ const onAdvancedUpload = () => {
 					<template #body="slotProps">
 						<Button
 							icon="pi pi-pencil"
-							severity="info"
+							style="border-color: #01b0ee; color: #01b0ee"
 							outlined
 							rounded
 							class="mr-2"
@@ -493,7 +493,7 @@ const onAdvancedUpload = () => {
 				/>
 				<Button
 					label="Save"
-					severity="info"
+					style="background-color: #01b0ee; border-width: 0px"
 					icon="pi pi-check"
 					@click="saveProduct"
 				/>

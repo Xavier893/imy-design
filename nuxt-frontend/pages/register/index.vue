@@ -131,7 +131,7 @@ definePageMeta({
 							<Button
 								label="Sign Up"
 								class="w-full"
-								severity="info"
+								style="background-color: #01b0ee; border-width: 0px"
 								@click="checkPasswordMatches"
 							/>
 							<Divider align="center" type="solid">
@@ -139,9 +139,9 @@ definePageMeta({
 							</Divider>
 							<Button
 								label="Continue with"
+								style="background-color: #01b0ee; border-width: 0px"
 								icon="pi pi-google"
 								iconPos="right"
-								severity="info"
 								class="w-full"
 								@click="loginWithGoogle"
 							/>

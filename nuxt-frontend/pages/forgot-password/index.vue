@@ -86,9 +86,9 @@ definePageMeta({
 					>
 					<Button
 						label="Reset Password"
+						style="background-color: #01b0ee; border-width: 0px"
 						fluid
 						@click="showSuccess"
-						severity="info"
 					/>
 				</div>
 			</template>
@@ -158,6 +158,7 @@ definePageMeta({
 					</div>
 					<Button
 						label="Reset Password"
+						style="background-color: #01b0ee; border-width: 0px"
 						class="w-full"
 						severity="info"
 						@click="checkPasswordMatches"
@@ -193,7 +194,12 @@ definePageMeta({
 					class="flex flex-col w-full items-center justify-between gap-5 mt-5"
 				>
 					<NuxtLink class="w-full" to="/">
-						<Button label="Continue" fluid class="w-full" severity="info" />
+						<Button
+							label="Continue"
+							fluid
+							class="w-full"
+							style="background-color: #01b0ee; border-width: 0px"
+						/>
 					</NuxtLink>
 				</div>
 			</template>

@@ -121,9 +121,9 @@ definePageMeta({
 							<div class="flex flex-col gap-2 items-center justify-between">
 								<Button
 									label="Log in"
+									style="background-color: #01b0ee; border-width: 0px"
 									class="w-full"
 									@click="checkForm"
-									severity="info"
 								/>
 								<small>
 									Forgot Password?
@@ -137,6 +137,7 @@ definePageMeta({
 							</Divider>
 							<Button
 								label="Continue with"
+								style="background-color: #01b0ee; border-width: 0px"
 								icon="pi pi-google"
 								iconPos="right"
 								class="w-full"

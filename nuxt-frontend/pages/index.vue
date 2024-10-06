@@ -404,8 +404,8 @@ watch(visible, () => {
 											@click.stop="handleBuyNow(item)"
 											icon="pi pi-cart-plus"
 											label="Add to Cart"
+											style="background-color: #01b0ee; border-width: 0px"
 											:disabled="item.inventoryStatus === 'OUTOFSTOCK'"
-											severity="info"
 											class="flex-auto md:flex-initial whitespace-nowrap"
 										></Button>
 									</div>
@@ -472,7 +472,7 @@ watch(visible, () => {
 											:loading="loadingState[item.id]"
 											@click.stop="handleBuyNow(item)"
 											label="Add to Cart"
-											severity="info"
+											style="background-color: #01b0ee; border-width: 0px"
 											:disabled="item.inventoryStatus === 'OUTOFSTOCK'"
 											class="flex-auto whitespace-nowrap"
 										></Button>
@@ -492,5 +492,6 @@ watch(visible, () => {
 	font-size: 64px;
 	margin-bottom: 1rem;
 	font-family: "Bebas Neue", sans-serif;
+	color: #93a8b1;
 }
 </style>

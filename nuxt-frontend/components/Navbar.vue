@@ -12,7 +12,7 @@
 			v-for="item in items"
 			:key="item.label"
 			:label="item.label"
-			:severity="item.label === activeItem ? 'primary' : 'secondary'"
+			severity="secondary"
 			text
 			@click="router.push(item.to)"
 		/>
@@ -97,7 +97,7 @@
 					<Button
 						label="Checkout"
 						icon="pi pi-fw pi-check-square"
-						severity="info"
+						style="background-color: #01b0ee; border-width: 0px"
 						class="w-full"
 					/>
 				</template>
