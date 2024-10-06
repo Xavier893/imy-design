@@ -177,6 +177,7 @@ watch(visible, () => {
 			:responsiveOptions="responsiveOptions"
 			:numScroll="1"
 			circular
+			:autoplayInterval="3000"
 		>
 			<template #item="slotProps">
 				<div
