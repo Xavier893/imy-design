@@ -193,7 +193,7 @@ definePageMeta({
 				<div
 					class="flex flex-col w-full items-center justify-between gap-5 mt-5"
 				>
-					<NuxtLink class="w-full" to="/">
+					<NuxtLink class="w-full" to="/products">
 						<Button
 							label="Continue"
 							fluid

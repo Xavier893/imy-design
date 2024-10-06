@@ -38,7 +38,7 @@ const checkForm = () => {
 		});
 
 		setTimeout(() => {
-			navigateTo("/");
+			navigateTo("/products");
 		}, 3000);
 	}
 };
@@ -57,7 +57,7 @@ const loginWithGoogle = () => {
 	});
 
 	setTimeout(() => {
-		navigateTo("/");
+		navigateTo("/products");
 	}, 3000);
 };
 
@@ -72,7 +72,7 @@ definePageMeta({
 	>
 		<Toast />
 		<img
-			src="../../public/background.jpg"
+			src="/background.jpg"
 			alt=""
 			class="z-0 w-full h-full absolute object-cover"
 		/>

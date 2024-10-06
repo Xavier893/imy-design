@@ -24,7 +24,7 @@ const checkPasswordMatches = () => {
 			});
 
 			setTimeout(() => {
-				navigateTo("/");
+				navigateTo("/products");
 			}, 3000);
 		}
 	} else {
@@ -47,7 +47,7 @@ const loginWithGoogle = () => {
 	});
 
 	setTimeout(() => {
-		navigateTo("/");
+		navigateTo("/products");
 	}, 3000);
 };
 

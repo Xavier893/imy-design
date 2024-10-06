@@ -6,27 +6,27 @@ import { definePreset } from "@primevue/themes";
 const MyPreset = definePreset(Aura, {});
 
 export default defineNuxtConfig({
-  compatibilityDate: "2024-04-03",
-  devtools: { enabled: true },
-  modules: [
-    "@primevue/nuxt-module",
-    "@nuxtjs/tailwindcss",
-    "@nuxt/image",
-    "@nuxt/fonts"
-  ],
-  primevue: {
-    usePrimeVue: true,
-    options: {
-      theme: {
-        preset: MyPreset,
-        options: {
-          darkModeSelector: "light",
-        },
-      },
-    },
-  },
-  css: ["primeicons/primeicons.css"],
-  app: {
-    pageTransition: { name: "page", mode: "out-in" },
-  },
+	compatibilityDate: "2024-04-03",
+	devtools: { enabled: true },
+	modules: [
+		"@primevue/nuxt-module",
+		"@nuxtjs/tailwindcss",
+		"@nuxt/image",
+		"@nuxt/fonts",
+	],
+	primevue: {
+		usePrimeVue: true,
+		options: {
+			theme: {
+				preset: MyPreset,
+				options: {
+					darkModeSelector: "light",
+				},
+			},
+		},
+	},
+	css: ["primeicons/primeicons.css"],
+	app: {
+		pageTransition: { name: "page", mode: "out-in" },
+	},
 });
