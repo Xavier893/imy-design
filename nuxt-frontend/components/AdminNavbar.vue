@@ -8,33 +8,17 @@
     ]"
     style="height: 80px; padding: 1rem 1rem"
   >
-    <Button
-      v-for="item in items"
-      :key="item.label"
-      :label="item.label"
-      :severity="activeItem === item.label ? 'primary' : 'secondary'"
-      text
-      @click="router.push(item.to)"
-    />
-    <div class="w-[65px] h-[65px]">
-      <NuxtLink to="/products">
-        <NuxtImg src="newlogo.webp" alt="Logo" style="border-radius: 50%" />
-      </NuxtLink>
+    <div class="flex justify-between items-center gap-2">
+      <Button
+        v-for="item in items"
+        :key="item.label"
+        :label="item.label"
+        :severity="activeItem === item.label ? 'primary' : 'secondary'"
+        text
+        @click="router.push(item.to)"
+      />
     </div>
     <div>
-      <Button
-        icon="pi pi-fw pi-shopping-cart"
-        rounded
-        outlined
-        size="large"
-        severity="contrast"
-        aria-haspopup="true"
-        aria-controls="cart_menu"
-        :badge="cartItemsCount"
-        badgeSeverity="info"
-        class="mr-4 h-full"
-        @click="toggleCart"
-      />
       <Button
         icon="pi pi-fw pi-user"
         rounded
@@ -99,7 +83,6 @@
             icon="pi pi-fw pi-check-square"
             style="background-color: #01b0ee; border-width: 0px"
             class="w-full"
-            @click="navigateTo('/checkout')"
           />
         </template>
       </Menu>
@@ -109,23 +92,11 @@
 
 <script setup>
 import { ref, watch, onMounted, onBeforeUnmount } from "vue";
-import { useCart } from "~/composables/useCart"; // Import the global cart state
-
-const { cart, cartItemsCount, getTotalCost } = useCart(); // Access the cart, item count, and total cost
-
-watch(
-  cart,
-  () => {
-    console.log("Current Cart Items:", cart.value);
-  },
-  { deep: true }
-);
 
 const router = useRouter();
 const route = useRoute();
-const activeItem = ref(route.path === "/" ? "Home" : "Products");
+const activeItem = ref(route.path === "/dashboard" ? "Dashboard" : "Admin");
 const menu = ref();
-const cartMenu = ref();
 const isScrolled = ref(false);
 
 const handleScroll = () => {
@@ -143,21 +114,24 @@ onBeforeUnmount(() => {
 watch(
   () => route.path,
   () => {
-    if (route.path === "/products") {
-      activeItem.value = "Products";
-    } else if (route.path === "/products") {
-      activeItem.value = "Products";
-    } else {
-      activeItem.value = "";
+    if (route.path === "/dashboard") {
+      activeItem.value = "Dashboard";
+    } else if (route.path === "/admin") {
+      activeItem.value = "Manage Products";
     }
   }
 );
 
 const items = ref([
   {
-    label: "Products",
+    label: "Dashboard",
     icon: "pi pi-fw pi-home",
-    to: "/products",
+    to: "/dashboard",
+  },
+  {
+    label: "Manage Products",
+    icon: "pi pi-fw pi-shopping-cart",
+    to: "/admin",
   },
 ]);
 
@@ -171,12 +145,5 @@ const menuItems = ref([
 
 const toggle = (event) => {
   menu.value.toggle(event);
-};
-
-const toggleCart = (event) => {
-  if (cartItemsCount.value === 0) {
-    return;
-  }
-  cartMenu.value.toggle(event);
 };
 </script>

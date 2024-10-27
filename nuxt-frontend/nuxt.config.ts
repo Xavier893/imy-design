@@ -13,6 +13,7 @@ export default defineNuxtConfig({
 		"@nuxtjs/tailwindcss",
 		"@nuxt/image",
 		"@nuxt/fonts",
+		"@pinia/nuxt",
 	],
 	primevue: {
 		usePrimeVue: true,
